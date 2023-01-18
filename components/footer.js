@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <div className={styles.container}>
       {/* Used when doing page-level data fetching */}
-      {/*<Link className={styles.refresh} href="/">Refresh</Link>*/}
+      <Link className={styles.refresh} onClick={() => window.location.reload()} href="/">Refresh</Link>
 
       {/* Used when doing component-level data fetching */}
-      <a className={styles.refresh} onClick={() => window.location.reload()} href="/">Refresh</a>
+      {/*<a className={styles.refresh} onClick={() => window.location.reload()} href="/">Refresh</a>*/}
 
     </div>
   );
