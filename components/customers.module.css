@@ -37,3 +37,13 @@
   text-decoration: underline;
   color: darkblue;
 }
+
+@media screen and (max-width: 350px) {
+  .data {
+    font-size: 10px;
+    padding-top: 15px;
+  }
+  .email {
+    font-size: 8px;
+  }
+}
