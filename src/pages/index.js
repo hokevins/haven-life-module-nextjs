@@ -9,7 +9,7 @@ import Customers from '../../components/customers'
 // Alternatively, see components/customers.js to see component-level data fetching
 // Trade off is between initial loading time and initial page weight
 import { getCustomersData } from '../../lib/customers'
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const allCustomersData = await getCustomersData();
   return {
     props: {
