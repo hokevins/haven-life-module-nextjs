@@ -10,7 +10,7 @@ export default function Customers({ allCustomersData }) {
   // See pages/index.js
   // To enable, use alternateAllCustomersData instead of allCustomersData
   /*
-  let [alternateAllCustomersData, setAlternateAllCustomersData] = useState(null);
+  const [alternateAllCustomersData, setAlternateAllCustomersData] = useState(null);
   useEffect(() => {
     const fetchData = async () => {
       const data = await getCustomersData();

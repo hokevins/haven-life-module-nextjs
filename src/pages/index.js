@@ -7,7 +7,7 @@ import Customers from '../../components/customers'
 
 // This will ensure data is passed as props from Home -> Customers
 // Alternatively, see components/customers.js to see component-level data fetching
-// Trade off is between initial loading time and initial page weight
+// Trade off is between initial loading time and initial page weight between index page and Customer component
 import { getCustomersData } from '../../lib/customers'
 export async function getServerSideProps() {
   const allCustomersData = await getCustomersData();
@@ -16,6 +16,7 @@ export async function getServerSideProps() {
       allCustomersData,
     },
   };
+  // TODO: Add error handling and error page
 }
 
 export default function Home({ allCustomersData }) {
