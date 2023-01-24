@@ -10,13 +10,16 @@ import Customers from '../../components/customers'
 // Trade off is between initial loading time and initial page weight between index page and Customer component
 import { getCustomersData } from '../../lib/customers'
 export async function getServerSideProps() {
-  const allCustomersData = await getCustomersData();
-  return {
-    props: {
-      allCustomersData,
-    },
-  };
-  // TODO: Add error handling and error page
+  try {
+    const allCustomersData = await getCustomersData();
+    return {
+      props: {
+        allCustomersData,
+      },
+    };
+  } catch (err) {
+    console.warn(err.error);
+  }
 }
 
 export default function Home({ allCustomersData }) {
