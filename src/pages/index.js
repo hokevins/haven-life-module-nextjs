@@ -23,6 +23,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home({ allCustomersData }) {
+  throw new Error('eeek');
   return (
     <>
       <Head>
